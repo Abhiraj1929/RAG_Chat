@@ -78,7 +78,7 @@ def _render_empty_state(vector_store: VectorStore):
                         vector_store,
                     )
                 else:
-                    st.info("Click the &#9776; menu in the top-left to open the sidebar and upload a document!", icon="&#128194;")
+                    st.info("Click the menu in the top-left to open the sidebar and upload a document!", icon="📁")
 
 
 def _render_sources(sources: list):

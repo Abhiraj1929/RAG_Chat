@@ -1,10 +1,17 @@
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+def _get_secret(key: str, default: str = "") -> str:
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    return os.getenv(key, default)
 
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-CHAT_MODEL = os.getenv("CHAT_MODEL", "nvidia/nemotron-3-ultra-550b-a55b:free")
+
+OPENROUTER_API_KEY = _get_secret("OPENROUTER_API_KEY")
+CHAT_MODEL = _get_secret("CHAT_MODEL", "nvidia/nemotron-3-ultra-550b-a55b:free")
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_DIM = 384
 CHUNK_SIZE = 1000

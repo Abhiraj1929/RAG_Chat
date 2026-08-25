@@ -44,11 +44,12 @@ CSS = """
         padding: 14px 24px;
         background: #171717;
         border-bottom: 1px solid rgba(255,255,255,0.06);
-        margin: 0 -1rem 0.5rem -1rem;
+        margin-bottom: 0.5rem;
         position: sticky;
         top: 0;
         z-index: 100;
         backdrop-filter: blur(10px);
+        border-radius: 0 0 8px 8px;
     }
     .app-header .logo {
         width: 38px;
@@ -370,6 +371,7 @@ CSS = """
         .app-header {
             padding: 12px 16px;
             gap: 10px;
+            border-radius: 0;
         }
         .app-header .logo {
             width: 34px;
@@ -453,6 +455,7 @@ CSS = """
     @media (max-width: 480px) {
         .app-header {
             padding: 10px 12px;
+            border-radius: 0;
         }
         .app-header .logo {
             width: 30px;

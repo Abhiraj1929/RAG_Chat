@@ -7,8 +7,13 @@ from core.vector_store import VectorStore
 st.set_page_config(
     page_title="RAG Chat",
     page_icon="🤖",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="expanded",
+    menu_items={
+        "Get help": None,
+        "Report a Bug": None,
+        "About": "RAG Chat - AI-powered document assistant",
+    },
 )
 
 inject_styles()

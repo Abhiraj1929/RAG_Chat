@@ -28,10 +28,9 @@ CSS = """
        MAIN CONTAINER
        ══════════════════════════════════════════ */
     .block-container {
-        max-width: 900px !important;
+        max-width: 100% !important;
         padding-top: 0.5rem !important;
         padding-bottom: 1rem !important;
-        margin: 0 auto;
     }
 
     /* ══════════════════════════════════════════
@@ -365,7 +364,6 @@ CSS = """
     @media (max-width: 768px) {
         .block-container {
             padding: 0 !important;
-            max-width: 100% !important;
         }
 
         .app-header {
@@ -445,7 +443,7 @@ CSS = """
        ══════════════════════════════════════════ */
     @media (min-width: 769px) and (max-width: 1024px) {
         .block-container {
-            max-width: 95% !important;
+            max-width: 100% !important;
         }
     }
 

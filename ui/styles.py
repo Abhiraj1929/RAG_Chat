@@ -9,8 +9,14 @@ CSS = """
         min-height: 100vh;
     }
 
-    #MainMenu, header, footer { visibility: hidden; }
+    #MainMenu, footer { visibility: hidden; }
     .stDeployButton { display: none; }
+
+    /* Show hamburger menu on mobile for sidebar toggle */
+    @media (max-width: 768px) {
+        #MainMenu { visibility: visible !important; }
+        #MainMenu > div { padding: 0 !important; }
+    }
 
     /* Hide scrollbar globally */
     ::-webkit-scrollbar { width: 6px; }

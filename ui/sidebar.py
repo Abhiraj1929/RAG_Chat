@@ -7,6 +7,11 @@ def render_sidebar(vector_store: VectorStore):
     with st.sidebar:
         st.markdown("### Knowledge Base")
 
+        st.markdown(
+            '<p style="color:#666;font-size:0.78rem;margin:-4px 0 8px 0;">Upload files or paste text, then chat below</p>',
+            unsafe_allow_html=True,
+        )
+
         count = vector_store.count
         if count > 0:
             st.markdown(
@@ -72,7 +77,7 @@ def render_sidebar(vector_store: VectorStore):
             col1, col2 = st.columns([3, 1])
             with col1:
                 st.markdown(
-                    f'<p style="color:#888;font-size:0.8rem;margin:8px 0 0 0;">{count} chunks ready for search</p>',
+                    f'<p style="color:#888;font-size:0.8rem;margin:8px 0 0 0;">{count} chunks ready</p>',
                     unsafe_allow_html=True,
                 )
             with col2:

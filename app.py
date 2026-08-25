@@ -7,7 +7,7 @@ from core.vector_store import VectorStore
 st.set_page_config(
     page_title="RAG Chat",
     page_icon="🤖",
-    layout="centered",
+    layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
         "Get help": None,

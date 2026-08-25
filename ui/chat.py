@@ -45,11 +45,23 @@ def _render_empty_state(vector_store: VectorStore):
             <div class="empty-state">
                 <span class="empty-icon">&#128196;</span>
                 <h2>How can I help you today?</h2>
-                <p>Upload documents in the sidebar, then ask me anything about them.</p>
+                <p>Upload documents, then ask me anything about them.</p>
             </div>
             """,
             unsafe_allow_html=True,
         )
+
+        st.markdown(
+            """
+            <div style="text-align:center;margin:0.5rem 0 1rem;">
+                <span style="display:inline-block;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:10px 20px;color:#60a5fa;font-size:0.85rem;">
+                    &#128194; Open the <b>Sidebar</b> (top-left &#9776; or swipe right) to upload files
+                </span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
         suggestions = [
             ("Upload a PDF", "I'll help you analyze your PDF document"),
             ("Paste some text", "I'll help you understand and answer questions about the text"),
@@ -66,7 +78,7 @@ def _render_empty_state(vector_store: VectorStore):
                         vector_store,
                     )
                 else:
-                    st.info("Open the sidebar (arrow on the left) to upload a document first!")
+                    st.info("Click the &#9776; menu in the top-left to open the sidebar and upload a document!", icon="&#128194;")
 
 
 def _render_sources(sources: list):
